@@ -42,7 +42,10 @@ class ViewController: UIViewController {
             }
         }
         
-        
+        //監聽
+        dbRef.child("appdefault/name").observe(.value) { (snapshot) in
+            self.pageTitle.text = snapshot.value as? String
+        }
 
     }
 

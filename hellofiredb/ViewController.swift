@@ -37,7 +37,7 @@ class ViewController: UIViewController {
                 
                 let testRef = self.dbRef.child("test")
                 testRef.observeSingleEvent(of: DataEventType.value) { (snapshot) in
-                    self.input.text = snapshot.value as! String
+                    self.input.text = snapshot.value as? String
                 }
             }
         }
@@ -48,10 +48,13 @@ class ViewController: UIViewController {
 
     @IBAction func enterAction(_ sender: Any) {
         let inputValue = input.text ?? ""
+        let dic:[String:Any] = ["name" : "Grace", "height" : 165] as [String : Any]
+        let array = ["Tom", "Grace", "Kevin"]
         //取得db reference
         dbRef = Database.database().reference()
-        
         dbRef.child("test").setValue(inputValue)
+        dbRef.child("dic").setValue(dic)
+        dbRef.child("array").setValue(array)
     }
     
 }

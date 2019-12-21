@@ -14,16 +14,28 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         //取得db reference
         dbRef = Database.database().reference()
-        let appNameRef = dbRef.child("appdefault/name")
-        appNameRef.observeSingleEvent(of: DataEventType.value) { (snapshot) in
-            print("appname: \(snapshot.value as! String)")
+        
+        //Login
+        Auth.auth().signInAnonymously { (user, error) in
+            if error != nil {
+                print(error?.localizedDescription ?? "")
+            } else {
+                let appNameRef = self.dbRef.child("appdefault/name")
+                appNameRef.observeSingleEvent(of: DataEventType.value) { (snapshot) in
+                    print("appname: \(snapshot.value as! String)")
+                }
+                let appVersionRef = self.dbRef.child("appdefault/version")
+                appVersionRef.observeSingleEvent(of: DataEventType.value) { (snapshot) in
+                    print("version: \(snapshot.value as! Double)")
+                }
+            }
         }
-        let appVersionRef = dbRef.child("appdefault/version")
-        appVersionRef.observeSingleEvent(of: DataEventType.value) { (snapshot) in
-            print("version: \(snapshot.value as! Double)")
-        }
+        
+        
+
     }
 
 

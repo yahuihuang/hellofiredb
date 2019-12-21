@@ -55,7 +55,14 @@ class ViewController: UIViewController {
         dbRef.child("test").setValue(inputValue)
         dbRef.child("dic").setValue(dic)
         dbRef.child("array").setValue(array)
+        
+        dbRef.child("myTest/timestep").setValue(ServerValue.timestamp())
     }
     
+    @IBAction func deleteAction(_ sender: Any) {
+        //取得db reference
+        dbRef = Database.database().reference()
+        dbRef.child("test").removeValue()
+    }
 }
 

@@ -47,6 +47,22 @@
                                     <action selector="enterAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Og-Af-Jcb"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gSf-1X-85v">
+                                <rect key="frame" x="225" y="298" width="120" height="30"/>
+                                <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="HTu-RV-QoS"/>
+                                    <constraint firstAttribute="height" constant="30" id="YwX-NF-AGS"/>
+                                    <constraint firstAttribute="width" constant="120" id="cGb-S2-YKF"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="qii-Wa-ySh"/>
+                                </constraints>
+                                <state key="normal" title="刪除">
+                                    <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YKy-4v-uOw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -56,7 +72,9 @@
                             <constraint firstItem="4ow-LF-Dsp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="SWI-C1-cFv"/>
                             <constraint firstItem="baE-wF-Urk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="WS1-hW-xce"/>
                             <constraint firstItem="XsS-j1-M9H" firstAttribute="trailing" secondItem="4ow-LF-Dsp" secondAttribute="trailing" id="aYG-YM-tST"/>
+                            <constraint firstItem="gSf-1X-85v" firstAttribute="top" secondItem="XsS-j1-M9H" secondAttribute="bottom" constant="20" id="bcI-JU-GOX"/>
                             <constraint firstItem="4ow-LF-Dsp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ee2-qf-fcz"/>
+                            <constraint firstItem="gSf-1X-85v" firstAttribute="trailing" secondItem="XsS-j1-M9H" secondAttribute="trailing" id="mR6-tD-n3r"/>
                             <constraint firstItem="XsS-j1-M9H" firstAttribute="top" secondItem="4ow-LF-Dsp" secondAttribute="bottom" constant="2" id="szi-tl-ZkS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="baE-wF-Urk" secondAttribute="trailing" constant="10" id="uDW-pd-v7Z"/>
                         </constraints>

@@ -47,16 +47,21 @@ class ViewController: UIViewController {
     }
 
     @IBAction func enterAction(_ sender: Any) {
-        let inputValue = input.text ?? ""
-        let dic:[String:Any] = ["name" : "Grace", "height" : 165] as [String : Any]
-        let array = ["Tom", "Grace", "Kevin"]
-        //取得db reference
-        dbRef = Database.database().reference()
-        dbRef.child("test").setValue(inputValue)
-        dbRef.child("dic").setValue(dic)
-        dbRef.child("array").setValue(array)
+//        let inputValue = input.text ?? ""
+//        let dic:[String:Any] = ["name" : "Grace", "height" : 165] as [String : Any]
+//        let array = ["Tom", "Grace", "Kevin"]
+//        //取得db reference
+//        dbRef = Database.database().reference()
+//        dbRef.child("test").setValue(inputValue)
+//        dbRef.child("dic").setValue(dic)
+//        dbRef.child("array").setValue(array)
+//
+//        dbRef.child("myTest/timestep").setValue(ServerValue.timestamp())
         
-        dbRef.child("myTest/timestep").setValue(ServerValue.timestamp())
+        let inputValue = input.text ?? ""
+        let dic:[String:Any?] = ["text": inputValue,
+                                "timestamp":ServerValue.timestamp()]
+        dbRef.child("table").childByAutoId().setValue(dic)
     }
     
     @IBAction func deleteAction(_ sender: Any) {

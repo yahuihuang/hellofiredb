@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,9 +13,12 @@
 		6585FECD23ADB80A009DA8C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6585FECB23ADB80A009DA8C7 /* Main.storyboard */; };
 		6585FECF23ADB80E009DA8C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6585FECE23ADB80E009DA8C7 /* Assets.xcassets */; };
 		6585FED223ADB80E009DA8C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6585FED023ADB80E009DA8C7 /* LaunchScreen.storyboard */; };
+		6585FEDA23ADBB4F009DA8C7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6585FED923ADBB4F009DA8C7 /* GoogleService-Info.plist */; };
+		F01B618E27A520EFF162562A /* Pods_hellofiredb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF889FC12BF9E7E3AD981A5 /* Pods_hellofiredb.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		300372F9EFD0C7E41BAB15DE /* Pods-hellofiredb.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hellofiredb.debug.xcconfig"; path = "Target Support Files/Pods-hellofiredb/Pods-hellofiredb.debug.xcconfig"; sourceTree = "<group>"; };
 		6585FEC223ADB80A009DA8C7 /* hellofiredb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hellofiredb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6585FEC523ADB80A009DA8C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6585FEC723ADB80A009DA8C7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,9 @@
 		6585FECE23ADB80E009DA8C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6585FED123ADB80E009DA8C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6585FED323ADB80E009DA8C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6585FED923ADBB4F009DA8C7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		901BFAFF39601B2C075F83DD /* Pods-hellofiredb.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hellofiredb.release.xcconfig"; path = "Target Support Files/Pods-hellofiredb/Pods-hellofiredb.release.xcconfig"; sourceTree = "<group>"; };
+		ECF889FC12BF9E7E3AD981A5 /* Pods_hellofiredb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hellofiredb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F01B618E27A520EFF162562A /* Pods_hellofiredb.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +49,8 @@
 			children = (
 				6585FEC423ADB80A009DA8C7 /* hellofiredb */,
 				6585FEC323ADB80A009DA8C7 /* Products */,
+				AF9C9CFECCFFD880FFFFF482 /* Pods */,
+				928B382017DB2563C8AE9657 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +65,7 @@
 		6585FEC423ADB80A009DA8C7 /* hellofiredb */ = {
 			isa = PBXGroup;
 			children = (
+				6585FED923ADBB4F009DA8C7 /* GoogleService-Info.plist */,
 				6585FEC523ADB80A009DA8C7 /* AppDelegate.swift */,
 				6585FEC723ADB80A009DA8C7 /* SceneDelegate.swift */,
 				6585FEC923ADB80A009DA8C7 /* ViewController.swift */,
@@ -67,6 +77,23 @@
 			path = hellofiredb;
 			sourceTree = "<group>";
 		};
+		928B382017DB2563C8AE9657 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ECF889FC12BF9E7E3AD981A5 /* Pods_hellofiredb.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AF9C9CFECCFFD880FFFFF482 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				300372F9EFD0C7E41BAB15DE /* Pods-hellofiredb.debug.xcconfig */,
+				901BFAFF39601B2C075F83DD /* Pods-hellofiredb.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6585FED623ADB80E009DA8C7 /* Build configuration list for PBXNativeTarget "hellofiredb" */;
 			buildPhases = (
+				5EE66BD6AF80082A38164D8A /* [CP] Check Pods Manifest.lock */,
 				6585FEBE23ADB80A009DA8C7 /* Sources */,
 				6585FEBF23ADB80A009DA8C7 /* Frameworks */,
 				6585FEC023ADB80A009DA8C7 /* Resources */,
+				CC5C471E766BEF51EE6C1F03 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,12 +155,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				6585FED223ADB80E009DA8C7 /* LaunchScreen.storyboard in Resources */,
+				6585FEDA23ADBB4F009DA8C7 /* GoogleService-Info.plist in Resources */,
 				6585FECF23ADB80E009DA8C7 /* Assets.xcassets in Resources */,
 				6585FECD23ADB80A009DA8C7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5EE66BD6AF80082A38164D8A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-hellofiredb-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC5C471E766BEF51EE6C1F03 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-hellofiredb/Pods-hellofiredb-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-hellofiredb/Pods-hellofiredb-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-hellofiredb/Pods-hellofiredb-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6585FEBE23ADB80A009DA8C7 /* Sources */ = {
@@ -282,6 +354,7 @@
 		};
 		6585FED723ADB80E009DA8C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 300372F9EFD0C7E41BAB15DE /* Pods-hellofiredb.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +373,7 @@
 		};
 		6585FED823ADB80E009DA8C7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 901BFAFF39601B2C075F83DD /* Pods-hellofiredb.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
